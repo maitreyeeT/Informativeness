@@ -35,3 +35,6 @@ trans_info	instruction_segment
 ### After this we apply dependency parsing using SPACY. 
 ### Then we calculate cohesion and informativeness equations. 
 
+### Usage 
+As a loss function for generating informative natural language and to analyse syntactically cohesive instances of natural language.
+

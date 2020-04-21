@@ -114,7 +114,13 @@ class CohesionFromDepTree():
         parsedLtree['depSum_k'] = parsedLtree.dep_count_k.apply(lambda x: sum(x))
         parsedLtree['headSum_p'] = parsedLtree.head_pLength.apply(lambda x: sum(x))
         parsedLtree['headSum_k'] = parsedLtree.head_kLength.apply(lambda x: sum(x))
-        parsedLtree['cohesion'] = ((parsedLtree['depSum_k']) - (parsedLtree['depSum_p']))
+        ####pervious version of the cohesion metric
+        parsedLtree['cohesion_V1'] = (((parsedLtree['depSum_k'])*(parsedLtree['headSum_k']))
+                                      - ((parsedLtree['depSum_p'])*(parsedLtree['headSum_p'])))
+        #####current and simplified version of cohesion metric
+        parsedLtree['cohesion'] = (
+        (parsedLtree['depSum_k']) - (parsedLtree['depSum_p']))
+        ######for finding out below we can use any of the version of cohesion above
         parsedLtree['cohesion_norm'] = round(
         parsedLtree.cohesion / (parsedLtree['length_segment']), 2)
 

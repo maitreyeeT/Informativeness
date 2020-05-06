@@ -11,8 +11,8 @@ from copy import deepcopy
 class CohesionFromDepTree():
 
     def __init__(self):
-        self.dir = '/home/maitreyee/Development/informativeness/data_metrics'
-        self.home_dir = '/home/maitreyee/Development/informativeness/data/'
+        self.dir = '../data_metrics'
+        self.home_dir = '../data/'
         self.all_lefts = []
         self.all_rights = []
         self.total_words = []
@@ -136,4 +136,4 @@ class CohesionFromDepTree():
 
 if __name__ == "__main__":
     depTree = CohesionFromDepTree()
-    findCohesion = depTree.cohesionCalculate()
+    depTree.cohesionCalculate()

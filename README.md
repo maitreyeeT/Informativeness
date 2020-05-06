@@ -12,12 +12,10 @@ Here we present the implementation of two metrics: syntactic cohesion and inform
 
 ### The libraries used are as follows, 
 ### install libraries using pip and use virtual environment to keep things clean:
+
 ```
-pip install -U spacy
-pip install pandas
-pip install copy
+pip -r requirements.txt
 ```
-### Don't forget to change the folder path in cohesion_specificity.py for dir and home_dir
 
 The format of the data is tab delimited csv files with index (below trans_info) and instructions (instruction_segment) 
 where, each of it is expanded to consequitive rows with segments as indicated in the example below. 
